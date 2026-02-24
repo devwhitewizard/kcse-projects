@@ -183,7 +183,7 @@
 
   .nav-links {
     width: 100%;
-    max-width: none;
+    max-width: 200px;
     padding: 20px 15px;
     gap: 15px;
   }
