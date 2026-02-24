@@ -1,8 +1,8 @@
 .contact {
-  min-height: calc(100vh - 80px);
-  padding: 80px 20px 40px;
+  min-height: 100vh;
+  padding: 55px 20px 40px;
   background: linear-gradient(135deg, #f3f4f6 0%, #ffffff 100%);
-  margin-top: 80px;
+  box-sizing: border-box;
 }
 
 .contact-container {

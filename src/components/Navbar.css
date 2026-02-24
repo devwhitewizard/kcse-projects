@@ -76,26 +76,26 @@
 .nav-toggle .hamburger::after {
   content: '';
   display: block;
-  width: 22px;
-  height: 2px;
+  width: 24px;
+  height: 2.5px;
   background: #fff;
   border-radius: 2px;
   transition: transform 200ms ease, opacity 200ms ease;
 }
 .nav-toggle .hamburger::before {
-  transform: translateY(-7px);
+  transform: translateY(-8px);
 }
 .nav-toggle .hamburger::after {
-  transform: translateY(5px);
+  transform: translateY(8px);
 }
 .nav-toggle.open .hamburger {
   background: transparent;
 }
 .nav-toggle.open .hamburger::before {
-  transform: rotate(45deg) translate(4px, 4px);
+  transform: rotate(45deg) translateY(0);
 }
 .nav-toggle.open .hamburger::after {
-  transform: rotate(-45deg) translate(4px, -4px);
+  transform: rotate(-45deg) translateY(0);
 }
 
 .nav-links a {
@@ -148,11 +148,15 @@
     box-shadow: -8px 0 24px rgba(0,0,0,0.12);
     z-index: 999;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Prevent the off-screen menu from intercepting pointer events when closed */
+    pointer-events: none;
     list-style: none;
   }
 
   .nav-links.open {
     transform: translateX(0);
+    pointer-events: auto;
   }
 
   .nav-toggle {

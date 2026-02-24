@@ -1,5 +1,6 @@
 import './App.css'
 import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
@@ -28,6 +29,15 @@ function App() {
         return <Home />;
     }
   };
+
+  useEffect(() => {
+    // Ensure each route navigation starts at top of page
+    try {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    } catch (e) {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname]);
 
   return (
     <>
