@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -10,12 +10,16 @@ export default function Navbar() {
     return location.pathname === path ? "active" : "";
   };
 
+  const handleLinkClick = () => {
+    setOpen(false); // Close menu when a link is clicked
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <a href="/" className="logo">
+        <Link to="/" className="logo" onClick={handleLinkClick}>
           <img src="/logo.png" alt="KCSE Projects Logo" className="logo-img" />
-        </a>
+        </Link>
         <button
           className={`nav-toggle ${open ? 'open' : ''}`}
           aria-label="Toggle navigation"
@@ -25,12 +29,12 @@ export default function Navbar() {
           <span className="hamburger" />
         </button>
         
-        <ul className={`nav-links ${open ? 'open' : ''}`} onClick={() => setOpen(false)}>
-          <li><a href="/" className={isActive("/")}>Home</a></li>
-          <li><a href="/about" className={isActive("/about")}>About</a></li>
-          <li><a href="/projects" className={isActive("/projects")}>Past Projects</a></li>
-          <li><a href="/shop" className={isActive("/shop")}>Shop</a></li>
-          <li><a href="/contact" className={isActive("/contact")}>Contact</a></li>
+        <ul className={`nav-links ${open ? 'open' : ''}`}>
+          <li><Link to="/" className={isActive("/")} onClick={handleLinkClick}>Home</Link></li>
+          <li><Link to="/about" className={isActive("/about")} onClick={handleLinkClick}>About</Link></li>
+          <li><Link to="/projects" className={isActive("/projects")} onClick={handleLinkClick}>Past Projects</Link></li>
+          <li><Link to="/shop" className={isActive("/shop")} onClick={handleLinkClick}>Shop</Link></li>
+          <li><Link to="/contact" className={isActive("/contact")} onClick={handleLinkClick}>Contact</Link></li>
         </ul>
       </div>
     </nav>
