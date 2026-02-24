@@ -1,6 +1,7 @@
 import '../css/Home.css';
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/layout/Footer.jsx";
+import { Link } from "react-router-dom";
 
 export default function Home() {
     const handleDownloadQuestionPaper = () => {
@@ -33,7 +34,7 @@ export default function Home() {
                         We provide fully developed, professionally built project systems to ensure your academic success.
                     </p>
                     <div className="hero-buttons">
-                        <a href="/shop" className="btn btn-primary">Get Full Project</a>
+                        <Link to="/shop" className="btn btn-primary">Get Full Project</Link>
                         <button onClick={handleDownloadQuestionPaper} className="btn btn-secondary" style={{ border: 'none', cursor: 'pointer' }}>Get Question Paper</button>
                     </div>
                 </div>
@@ -74,13 +75,13 @@ export default function Home() {
                     company. The company then offers various internet services where the cost per month is based on the 
                     bandwidth requirements.
                 </p>
-                <a href="/about" className="link-btn">View Full Details →</a>
+                <Link to="/about" className="link-btn">View Full Details →</Link>
             </section>
 
             <section className="cta">
                 <h2>Limited Time Offer - 20% Discount!</h2>
                 <p>Get your fully done KCSE project work now and boost your final grade</p>
-                <a href="/shop" className="btn btn-primary btn-large">Get Started Today</a>
+                <Link to="/shop" className="btn btn-primary btn-large">Get Started Today</Link>
             </section>
 
             <Footer />

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../css/PastProjects.css";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/layout/Footer.jsx";
+import { Link } from "react-router-dom";
 
 export default function PastProjects() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -288,8 +289,8 @@ export default function PastProjects() {
                 )}
 
                 <div className="details-actions">
-                  <a href="/shop" className="btn-action btn-primary">Get Full Project</a>
-                  <a href="/contact" className="btn-action btn-secondary">Request Sample</a>
+                  <Link to="/shop" className="btn-action btn-primary" onClick={() => setSelectedProject(null)}>Get Full Project</Link>
+                  <Link to="/contact" className="btn-action btn-secondary" onClick={() => setSelectedProject(null)}>Request Sample</Link>
                 </div>
               </div>
             </div>
