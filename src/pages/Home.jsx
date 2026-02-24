@@ -1,11 +1,6 @@
 import '../css/Home.css';
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/layout/Footer.jsx";
-import About from './About.jsx';
-import Contact from './Contact.jsx';
-import PastProjects from './PastProjects.jsx';
-import Shop from './Shop.jsx';
-import Terms from './Terms.jsx';
 
 export default function Home() {
     const handleDownloadQuestionPaper = () => {
