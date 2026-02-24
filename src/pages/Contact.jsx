@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../css/Contact.css";
+import "../css/contact.css";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/layout/Footer.jsx";
 
