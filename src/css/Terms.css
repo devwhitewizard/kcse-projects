@@ -1,0 +1,151 @@
+/* Terms and Conditions Page */
+.terms-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-top: 55px;
+}
+
+.terms-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.terms-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.terms-hero p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* Terms Content Section */
+.terms-section {
+    background: white;
+    padding: 80px 20px;
+}
+
+.terms-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.terms-item {
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.terms-item h2 {
+    color: #1e3a8a;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    border-bottom: 3px solid #2563eb;
+    padding-bottom: 10px;
+}
+
+.terms-item p {
+    color: #374151;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.terms-item ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.terms-item ul li {
+    color: #374151;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.terms-item ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.terms-item a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.terms-item a:hover {
+    color: #1e3a8a;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .terms-hero {
+        padding: 60px 20px;
+    }
+
+    .terms-hero h1 {
+        font-size: 2rem;
+    }
+
+    .terms-hero p {
+        font-size: 1rem;
+    }
+
+    .terms-section {
+        padding: 40px 20px;
+    }
+
+    .terms-item h2 {
+        font-size: 1.25rem;
+    }
+
+    .terms-item p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .terms-hero {
+        padding: 40px 12px;
+    }
+
+    .terms-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .terms-section {
+        padding: 30px 12px;
+    }
+
+    .terms-container {
+        max-width: 100%;
+    }
+
+    .terms-item {
+        margin-bottom: 30px;
+    }
+
+    .terms-item h2 {
+        font-size: 1.1rem;
+    }
+
+    .terms-item p,
+    .terms-item ul li {
+        font-size: 0.9rem;
+    }
+}
