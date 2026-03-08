@@ -1,0 +1,14 @@
+.not-found-container {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.not-found-container h1 {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.not-found-container p {
+  font-size: 1.25rem;
+  color: #555;
+}
