@@ -1,20 +1,20 @@
 
 :root {
   /* Primary colors (Navbar, main buttons, section titles) */
-  --color-primary: #1E3A8A;
-  --color-primary-alt: #1F4E79;
+  --color-primary: #0f172a;
+  --color-primary-alt: #1e293b;
 
   /* Backgrounds and cards */
-  --color-bg: #FFFFFF;
-  --color-card: #FFFFFF;
+  --color-bg: #020617;
+  --color-card: #0f172a;
 
   /* Accent / highlight (CTA, featured projects) */
-  --color-accent: #F59E0B;
-  --color-accent-alt: #FFC107;
+  --color-accent: #3b82f6;
+  --color-accent-alt: #60a5fa;
 
   /* Text colors */
-  --text-on-primary: #FFFFFF;
-  --text-default: #0f172a;
+  --text-on-primary: #f8fafc;
+  --text-default: #f1f5f9;
 }
 
 .logo {
