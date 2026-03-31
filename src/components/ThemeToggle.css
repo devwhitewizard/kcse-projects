@@ -1,0 +1,43 @@
+.theme-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-primary);
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(56, 189, 248, 0.45);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.theme-fab:hover {
+  transform: scale(1.12) rotate(10deg);
+  box-shadow: 0 8px 28px rgba(56, 189, 248, 0.6);
+}
+
+.theme-fab:active {
+  transform: scale(0.95);
+}
+
+.theme-fab-icon {
+  display: block;
+  transition: transform 0.4s ease;
+  line-height: 1;
+}
+
+/* Light mode adjustments */
+.light-mode .theme-fab {
+  background: var(--color-primary-alt);
+  box-shadow: 0 4px 20px rgba(2, 132, 199, 0.35);
+}
+
+.light-mode .theme-fab:hover {
+  box-shadow: 0 8px 28px rgba(2, 132, 199, 0.5);
+}

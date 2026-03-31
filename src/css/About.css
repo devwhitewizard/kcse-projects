@@ -1,15 +1,16 @@
 .about {
   min-height: calc(100vh - 55px);
-  padding: 80px 20px 40px;
-  background: linear-gradient(135deg, #f3f4f6 0%, #ffffff 100%);
+  padding: 120px 20px 80px;
+  background: var(--color-bg);
   margin-top: 55px;
 }
 
 .about h1 {
   text-align: center;
-  font-size: 2.5rem;
-  color: #1e3a8a;
-  margin-bottom: 40px;
+  font-size: 3rem;
+  color: var(--text-heading);
+  margin-bottom: 60px;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -17,17 +18,17 @@
 .about-content {
   max-width: 900px;
   margin: 0 auto;
-  background: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
 }
 
 .about-text h2 {
-  color: #2563eb;
-  margin-top: 30px;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .about-text h2:first-child {
@@ -35,8 +36,8 @@
 }
 
 .about-text p {
-  color: #374151;
+  color: var(--text-body);
   line-height: 1.8;
-  font-size: 1.05rem;
-  margin-bottom: 15px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }

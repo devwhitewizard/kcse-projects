@@ -1,10 +1,11 @@
 /* Terms and Conditions Page */
 .terms-hero {
-    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-    color: white;
+    background: var(--color-bg-secondary);
+    color: var(--text-heading);
     text-align: center;
-    padding: 80px 20px;
+    padding: 120px 20px 80px;
     margin-top: 55px;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .terms-content {
@@ -13,21 +14,22 @@
 }
 
 .terms-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 3.5rem;
+    margin-bottom: 16px;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 900;
 }
 
 .terms-hero p {
-    font-size: 1.1rem;
-    opacity: 0.95;
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    font-weight: 600;
 }
 
 /* Terms Content Section */
 .terms-section {
-    background: white;
+    background: var(--color-bg);
     padding: 80px 20px;
 }
 
@@ -37,38 +39,49 @@
 }
 
 .terms-item {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     line-height: 1.8;
 }
 
 .terms-item h2 {
-    color: #1e3a8a;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    color: var(--text-heading);
+    font-size: 1.75rem;
+    margin-bottom: 24px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 700;
-    border-bottom: 3px solid #2563eb;
-    padding-bottom: 10px;
+    font-weight: 800;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.terms-item h2::before {
+    content: '';
+    width: 4px;
+    height: 24px;
+    background: var(--color-primary);
+    border-radius: 2px;
 }
 
 .terms-item p {
-    color: #374151;
-    font-size: 1rem;
-    margin-bottom: 15px;
+    color: var(--text-body);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }
 
 .terms-item ul {
     list-style: none;
-    padding-left: 20px;
-    margin-bottom: 15px;
+    padding-left: 0;
+    margin-bottom: 20px;
 }
 
 .terms-item ul li {
-    color: #374151;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    padding-left: 20px;
+    color: var(--text-body);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    padding-left: 32px;
     position: relative;
 }
 
@@ -76,19 +89,19 @@
     content: "✓";
     position: absolute;
     left: 0;
-    color: #2563eb;
-    font-weight: bold;
+    color: var(--color-accent);
+    font-weight: 900;
 }
 
 .terms-item a {
-    color: #2563eb;
+    color: var(--color-primary);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     transition: color 0.3s ease;
 }
 
 .terms-item a:hover {
-    color: #1e3a8a;
+    color: var(--color-primary-alt);
     text-decoration: underline;
 }
 

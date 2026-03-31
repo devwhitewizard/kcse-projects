@@ -8,13 +8,12 @@ import PastProjects from "./pages/PastProjects.jsx";
 import Shop from "./pages/Shop.jsx";
 import Terms from "./pages/Terms.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import ThemeToggle from "./components/ThemeToggle.jsx";
 
 function App() {
   const location = useLocation();
 
-
   useEffect(() => {
-    // Ensure each route navigation starts at top of page
     try {
       window.scrollTo({ top: 0, behavior: 'auto' });
     } catch (e) {
@@ -24,6 +23,7 @@ function App() {
 
   return (
     <>
+      <ThemeToggle />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

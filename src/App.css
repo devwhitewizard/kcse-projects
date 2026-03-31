@@ -1,76 +1,117 @@
-
 :root {
-  /* Primary colors (Navbar, main buttons, section titles) */
-  --color-primary: #0f172a;
-  --color-primary-alt: #1e293b;
-
-  /* Backgrounds and cards */
+  /* Primary Backgrounds */
   --color-bg: #020617;
-  --color-card: #0f172a;
+  --color-bg-secondary: #0b1120;
+  
+  /* Containers & Borders */
+  --color-card: #111827;
+  --color-border: #1e293b;
 
-  /* Accent / highlight (CTA, featured projects) */
-  --color-accent: #3b82f6;
-  --color-accent-alt: #60a5fa;
+  /* Accent & Primary Colors (Sky Blue / Cyan) */
+  --color-primary: #38bdf8;
+  --color-primary-alt: #0ea5e9;
 
-  /* Text colors */
-  --text-on-primary: #f8fafc;
-  --text-default: #f1f5f9;
+  /* Secondary Accent (Emerald Green) */
+  --color-accent: #10b981;
+  --color-accent-alt: #059669;
+
+  /* Typography */
+  --text-heading: #f8fafc;
+  --text-body: #94a3b8;
+  --text-on-primary: #020617;
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body.light-mode {
+  --color-bg: #f8fafc;
+  --color-bg-secondary: #f1f5f9;
+  --color-card: #ffffff;
+  --color-border: #e2e8f0;
+  --color-primary: #0ea5e9;
+  --color-primary-alt: #0284c7;
+  --text-heading: #0f172a;
+  --text-body: #475569;
+  --text-on-primary: #ffffff;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Global layout and theming */
 body {
   background: var(--color-bg);
-  color: var(--text-default);
+  color: var(--text-body);
+  font-family: 'Outfit', 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Ensure main app content doesn't add horizontal padding that hides full-bleed elements */
-main, .app, #root {
-  width: 100%;
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-heading);
+  border: 1px solid var(--color-border);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.light-mode .btn-secondary {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.light-mode .btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-heading);
+  transition: color 0.3s ease;
 }
 
 .card {
   padding: 2em;
-  background: var(--color-card);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(15,23,42,0.04);
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--color-primary);
 }
 
 /* Primary (main) buttons */
 .btn, button, .main-button {
-  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-alt));
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-alt));
   color: var(--text-on-primary);
   border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: 600;
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
 }
-.btn:hover, .main-button:hover {
+
+.btn:hover, button:hover, .main-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30,58,138,0.12);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.3);
+  opacity: 0.9;
 }
 
 /* Call-to-action / highlight buttons */
 .cta-button {
-  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-alt));
-  color: #000;
+  background: var(--color-accent);
+  color: #fff;
   border: none;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
   font-weight: 700;
 }
 
