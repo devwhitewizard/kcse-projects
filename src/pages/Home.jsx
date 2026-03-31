@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import '../css/Home.css';
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/layout/Footer.jsx";
@@ -5,6 +6,20 @@ import { Link } from "react-router-dom";
 import heroBg from "../assets/hero-bg.png";
 
 export default function Home() {
+    const fullText = "Azani ISP Information System";
+    const [typedText, setTypedText] = useState("");
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        if (index < fullText.length) {
+            const timeout = setTimeout(() => {
+                setTypedText((prev) => prev + fullText[index]);
+                setIndex((prev) => prev + 1);
+            }, 150);
+            return () => clearTimeout(timeout);
+        }
+    }, [index]);
+
     const handleDownloadQuestionPaper = () => {
         const fileId = '1y_KZ0ofTXXvXVTg-izpqUhoamJcYJGDp';
         const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}&confirm=1`;
@@ -25,7 +40,7 @@ export default function Home() {
                 <div className="hero-content">
                     <div className="hero-badge">KCSE 2026 EXCLUSIVE</div>
                     <h1>Master Your Computer Project</h1>
-                    <h2>Azani ISP Information System</h2>
+                    <h2 className="typing-text">{typedText}<span className="cursor">|</span></h2>
                     <p className="hero-description">
                         Excellence is not an accident. Get the most comprehensive, professionally developed solution for the 2026 KCSE Computer Project. 
                         We provide full source code, detailed documentation, and expert guidance to ensure your top-tier grade.
